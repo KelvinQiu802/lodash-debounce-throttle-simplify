@@ -1,6 +1,5 @@
 import React from 'react';
 import debounce from '../utils/debounce';
-import _ from 'lodash';
 
 function Counter() {
   const [debounceCount, setDebounceCount] = React.useState(0);
