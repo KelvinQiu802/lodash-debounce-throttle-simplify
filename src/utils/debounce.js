@@ -52,6 +52,8 @@ const debounce = (fn, wait, options) => {
   }
 
   function leadingEdge(time) {
+    lastInvokeTime = time;
+
     // 调用的开始，等待完整的wait
     timerId = setTimeout(timerExpired, wait);
 
@@ -92,7 +94,10 @@ const debounce = (fn, wait, options) => {
     console.log(1);
     const argsCopy = allArgs;
     allArgs = undefined;
-    return fn(...argsCopy);
+    if (allArgs) {
+      return fn(...argsCopy);
+    }
+    return fn();
   }
 
   function remainingWait(time) {

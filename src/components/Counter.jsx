@@ -11,7 +11,7 @@ function Counter() {
         setDebounceCount((prev) => prev + 1);
       },
       1000,
-      { leading: false, trailing: true, maxWait: 500 }
+      { leading: true, trailing: false, maxWait: 500 }
     ),
     []
   );
