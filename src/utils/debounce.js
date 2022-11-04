@@ -65,7 +65,7 @@ const debounce = (fn, wait, options) => {
     return result;
   }
 
-  function traillingEdge(time) {
+  function trailingEdge(time) {
     // 运行trailling意味着一次调用的结束
     timerId = undefined;
 
@@ -82,7 +82,7 @@ const debounce = (fn, wait, options) => {
     // 多次点击会改变lastCallTime, 所以shouldInvoke返回值也会改变
     if (shouldInvoke(time)) {
       // 处理trailling
-      return traillingEdge(time);
+      return trailingEdge(time);
     }
     // 不满足条件，继续等待
     // remainingWait来计算需要等待的具体时间
