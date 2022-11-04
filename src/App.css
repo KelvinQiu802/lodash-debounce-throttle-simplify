@@ -39,3 +39,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.counter-group {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.input-group {
+  display: flex;
+  gap: 150px;
+  justify-content: center;
+}
